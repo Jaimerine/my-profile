@@ -142,9 +142,39 @@ const showWork = (direction) => {
     })
 }
 
+const attachAnimationObservers = () => {
+
+    const options = {
+        root: null, //use the document's viewport as the container
+        rootMargin: '0px', //% or px - offsets added to each side of the intersection 
+        threshold: 0.2 //percentage of the target element which is visible
+    }
+
+    let callback = (entries) => {
+        entries.forEach(entry => {
+
+            //if entry (section) is visible - according with the params set in `options`, add `is-visible` class, else remove
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            } else {
+                entry.target.classList.remove('is-visible');
+            }
+
+        });
+    }
+
+    //create intersection observer instance by calling its constructor and passing callback function to be run whenever a threshold is crossed in one direction or the other:
+    let observer = new IntersectionObserver(callback, options);
+
+    //attach observer to each section
+    document.querySelectorAll('section').forEach(section => { observer.observe(section) });
+
+}
+
 //initialize
 const init = () => {
     showWork();
+    attachAnimationObservers();
     
     //event listeners on carrossel arrows
     const carrosselRight = document.querySelector('.fa-chevron-circle-right');

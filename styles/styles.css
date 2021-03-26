@@ -259,6 +259,9 @@ section h2:after {
   left: 0;
   bottom: 0;
   z-index: -20;
+}
+
+section.is-visible h2:after {
   -webkit-animation: underline 1s forwards linear;
           animation: underline 1s forwards linear;
 }
@@ -523,6 +526,8 @@ nav a:hover, nav a:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 40px;
+  -webkit-transform: translate(0, 90%);
+          transform: translate(0, 90%);
 }
 
 .icons li {
@@ -565,6 +570,33 @@ nav a:hover, nav a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+section.is-visible .icons {
+  -webkit-animation: slide-up 1s forwards;
+          animation: slide-up 1s forwards;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translate(0, 90%);
+            transform: translate(0, 90%);
+  }
+  to {
+    -webkit-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translate(0, 90%);
+            transform: translate(0, 90%);
+  }
+  to {
+    -webkit-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+  }
 }
 
 .work-container {

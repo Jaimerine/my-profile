@@ -37,12 +37,13 @@ section {
         left: 0;
         bottom: 0;
         z-index: -20;
-        animation: underline 1s forwards linear;
+        
     }
+}
 
-    // .work-container h3:after {
-    //     height: 30%;
-    // }
+//add animation when visible
+section.is-visible h2:after {
+    animation: underline 1s forwards linear;
 }
 
 //section header animation
@@ -266,6 +267,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
+    transform: translate(0, 90%);
 
     li {
         margin: 10px 20px 10px 0px;
@@ -302,6 +304,19 @@ nav {
         font-family: $header-font;
         display: flex;
         justify-content: center;
+    }
+}
+
+section.is-visible .icons {
+    animation: slide-up 1s forwards;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translate(0, 90%);
+    }
+    to {
+        transform: translate(0, 0%);
     }
 }
 
