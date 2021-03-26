@@ -130,13 +130,13 @@ const showWork = (direction) => {
     document.querySelector(".code-link").href = workItem.codeLink;
 
     //construct language icons
-    const languageList = document.querySelector(".work-item .languages");
+    const languageList = document.querySelector(".work-item .icons");
     languageList.innerHTML = '';
-    workItem.languages.forEach((language) => {
+    workItem.languages.forEach((icon) => {
         const li = document.createElement("li");
         const i = document.createElement("i");
-        i.classList.add(`devicon-${language.toLowerCase()}-plain`);
-        i.setAttribute('aria-label', language);
+        i.classList.add(`devicon-${icon.toLowerCase()}-plain`);
+        i.setAttribute('aria-label', icon);
         li.appendChild(i);
         languageList.appendChild(li);
     })

@@ -516,7 +516,7 @@ nav a:hover, nav a:focus {
   width: 29%;
 }
 
-.languages {
+.icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -525,11 +525,11 @@ nav a:hover, nav a:focus {
   margin-top: 40px;
 }
 
-.languages li {
-  margin: 10px;
+.icons li {
+  margin: 10px 20px 10px 0px;
 }
 
-.languages i {
+.icons i {
   font-size: 60px;
   scale: 1;
   color: #ED1E79;
@@ -537,21 +537,21 @@ nav a:hover, nav a:focus {
   transition: 0.5s;
 }
 
-.languages li:hover, .languages li:focus {
+.icons li:hover, .icons li:focus {
   scale: 1.2;
 }
 
-.languages li:hover i, .languages li:focus i {
+.icons li:hover i, .icons li:focus i {
   color: #F2F2F2;
 }
 
-.languages li {
+.icons li {
   position: relative;
   display: inline-block;
   margin-top: 30px;
 }
 
-.languages li i[aria-label]:hover::after {
+.icons li i[aria-label]:hover::after {
   content: attr(aria-label);
   position: absolute;
   bottom: -25%;
@@ -576,16 +576,15 @@ nav a:hover, nav a:focus {
   position: relative;
 }
 
-.work-container .languages {
+.work-container .icons {
   margin-top: 8px;
 }
 
-.work-container .languages li {
-  margin: 5px;
-  margin-top: 10px;
+.work-container .icons li {
+  margin: 10px 5px 5px 0px;
 }
 
-.work-container .languages i {
+.work-container .icons i {
   font-size: 30px;
 }
 
@@ -656,6 +655,22 @@ nav a:hover, nav a:focus {
   right: -85px;
 }
 
+.contact p {
+  margin: 20px 0 0;
+}
+
+.contact .icons {
+  margin-top: 10px;
+}
+
+.contact .icons li {
+  margin: 10px 15px 0px 0px;
+}
+
+.contact .icons i {
+  font-size: 40px;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -678,9 +693,13 @@ form .input {
 }
 
 form span {
-  margin-bottom: 7px;
+  margin: 7px 0;
   font-size: 16px;
   visibility: hidden;
+}
+
+form span:last-of-type {
+  margin: 0;
 }
 
 form .contact-container {
@@ -699,13 +718,13 @@ form .contact-container .input:last-of-type {
 
 form input[type="text"] {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 form input[type="text"], form textarea {
   padding: 20px;
   font-family: inherit;
   font-size: 20px;
-  margin-bottom: 10px;
   border: none;
   -webkit-transition: outline 0.2s;
   transition: outline 0.2s;

@@ -262,13 +262,13 @@ nav {
 
 //////////////// ABOUT SECTION /////////////////
 
-.languages {
+.icons {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
 
     li {
-        margin: 10px
+        margin: 10px 20px 10px 0px;
     }
 
     i {
@@ -315,13 +315,11 @@ nav {
     padding: 30px;
     position: relative;
 
-    .languages {
+    .icons {
         margin-top: 8px;
-        // margin-bottom: 10px;
 
         li {
-            margin: 5px;
-            margin-top: 10px;
+            margin: 10px 5px 5px 0px;
         }
     
         i {
@@ -414,6 +412,24 @@ nav {
 
 //////////////////// CONTACT //////////////////
 
+.contact {
+    p {
+        margin: 20px 0 0;
+    }
+
+    .icons {
+        margin-top: 10px;
+
+        li {
+            margin: 10px 15px 0px 0px;
+        }
+    
+        i {
+            font-size: 40px;
+        }
+    }
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -425,9 +441,13 @@ form {
     }
 
     span {
-        margin-bottom: 7px;
+        margin: 7px 0;
         font-size: 16px;
         visibility: hidden;
+    }
+
+    span:last-of-type {
+        margin: 0;
     }
 
     .contact-container {
@@ -444,13 +464,13 @@ form {
 
     input[type="text"] {
         width: 100%;
+        margin-bottom: 10px;
     }
 
     input[type="text"], textarea {
         padding: 20px;
         font-family: inherit;
         font-size: 20px;
-        margin-bottom: 10px;
         border: none;
         transition: outline 0.2s;
     }

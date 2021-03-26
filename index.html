@@ -168,7 +168,7 @@
             <div>
                 <p>Hi! I'm a web developer based in Toronto. I recently completed a web development bootcamp at Juno College after working in a project management like capacity for nearly 14 years. I have a passion for learning and creating - from napkin doodles, crocheting to building websites - I love to make beautiful things!</p>
             </div>
-            <ul class="languages" aria-label="Languages and Frameworks">
+            <ul class="icons" aria-label="Languages and Frameworks">
                 <li><i class="devicon-javascript-plain" aria-label="JavaScript"></i></li>
                 <li><i class="devicon-jquery-plain" aria-label="jQuery"></i></li>
                 <li><i class="devicon-typescript-plain" aria-label="TypeScript"></i></li>
@@ -203,7 +203,7 @@
                     </h3>
                     <div class="work-body">
                         <div class="work-text">
-                            <ul class="languages">
+                            <ul class="icons">
                                 <!-- languages added here -->
                             </ul>
                             <p>
@@ -231,12 +231,17 @@
         </section>
 
         <!-- contact section -->
-        <section id="contact">
+        <section class="contact" id="contact">
             <h2>Contact Me</h2>
+            <ul class="icons" aria-label="Contact Links">
+                <li><a href="https://www.linkedin.com/in/jaime-robbins/" target="_blank"><i class="devicon-linkedin-plain" aria-label="LinkedIn"></i></a></li>
+                <li><a href="https://github.com/Jaimerine/" target="_blank"><i class="devicon-github-plain" aria-label="GitHub"></i></a></li>
+                <li><a href="mailto:robbins_jaime@hotmail.com" target="_blank"><i class="fas fa-envelope"aria-label="Email"></i></a></li>
+            </ul>
             <div>
                 <p>Drop me a note below if you'd like to chat.</p>
                 <!-- <form action="https://formspree.io/f/mpzkaypy" method="POST"> -->
-                <form name="contact" action="/#contacted" method="POST" data-netlify="true">
+                <form name="contact" action="/#contacted" method="POST" netlify>
                     <div class="contact-container">
                         <div class="input">
                             <label for="name" class="visually-hidden">Name</label>
@@ -251,7 +256,7 @@
                     </div>
                     <div class="input">
                         <label for="message" class="visually-hidden">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
                         <span id="message-error">Please enter a message.</span>
                     </div>
                     <button type="submit">Send</button>
